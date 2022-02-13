@@ -78,13 +78,18 @@ ul {
 }
 
 .info::before {
-  content: "";
+  content: '';
   width: 60px;
   height: 4px;
   background: #ee2211;
   position: absolute;
   top: 30px;
   right: -30px;
+}
+
+.info-cover img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .botao {
@@ -95,7 +100,7 @@ ul {
   text-transform: uppercase;
 }
 
-.botao:hover{
+.botao:hover {
   background: #900;
 }
 
@@ -129,7 +134,7 @@ ul {
   grid-column: 2;
 }
 
-.vantagens-item:nth-child(odd){
+.vantagens-item:nth-child(odd) {
   background: #f7f7f7;
 }
 
@@ -138,4 +143,46 @@ ul {
   width: 100%;
   text-align: center;
   padding: 40px;
+}
+
+@media (max-width: 1100px) {
+  body {
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .header {
+    gap: 20px;
+  }
+  .menu {
+    margin: 10px;
+  }
+  .subtitulo {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .content {
+    max-width: 780px;
+  }
+  .content-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    text-align: left;
+    justify-items: start;
+  }
+  .info::before {
+    display: none;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .footer {
+    padding: 30px;
+  }
 }
